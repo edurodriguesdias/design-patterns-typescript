@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "NODE_ENV=dev node dist/index.js",
+    "test": "jest"
+  },
   "dependencies": {
     "@types/jest": "^29.5.9",
     "@types/node": "^20.9.3",
