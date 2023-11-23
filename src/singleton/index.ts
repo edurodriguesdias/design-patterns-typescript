@@ -1,20 +1,20 @@
-export class Service {
+export default class Singleton {
 
-    private static INSTANCE: Service;
+    private static INSTANCE: Singleton|null;
 
     private constructor() {
-        console.log(`Was initialized`);
+        console.log('Was initialized');
     }
 
-    public static instance(): Service
+    public static instance(): Singleton
     {
         if (! this.INSTANCE) {
-            this.INSTANCE = new Service();
+            this.INSTANCE = new Singleton();
         }
 
         return this.INSTANCE
     }
 }
 
-let service1 = Service.instance();
-let service2 = Service.instance();
+let service1 = Singleton.instance();
+let service2 = Singleton.instance();
