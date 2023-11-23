@@ -1,6 +1,6 @@
-import Singleton from '../../../src/singleton/index'
+import Singleton from '../../../../src/singleton/Singleton'
 
-describe('Singleton tests', () => {
+describe('Singleton', () => {
 
     let consoleLogSpy: jest.SpyInstance;
 
@@ -18,7 +18,9 @@ describe('Singleton tests', () => {
         const instance2 = Singleton.instance();
 
         expect(instance1).toBe(instance2);
+        expect(instance1).toBeInstanceOf(Singleton);
         expect(consoleLogSpy).toHaveBeenCalledTimes(1);
         expect(consoleLogSpy).toHaveBeenCalledWith('Was initialized');
+
     });
 });
