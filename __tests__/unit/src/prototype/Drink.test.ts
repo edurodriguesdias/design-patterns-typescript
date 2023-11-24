@@ -1,7 +1,7 @@
-import Drink from '../../../src/prototype/Drink'
+import Drink from '../../../../src/prototype/Drink'
 
 describe("Prototype", () => {
-    it("ensure that clone is the same", () => {
+    it("should clone a drink with the same flavors", () => {
         const flavors = [
             'mango',
             'lemon',
